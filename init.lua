@@ -12,7 +12,6 @@ minetest.register_chatcommand("colortag", {
     local numberone = tonumber(number1)
     local numbertwo = tonumber(number2)
     local numberthree = tonumber(number3)
-  )
   	    if number1 == nil or number2 == nil or number3 == nil then
           return false, "Be sure to enter all three numbers."
         end
