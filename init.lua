@@ -6,7 +6,7 @@ minetest.register_chatcommand("colortag", {
   func = function(name, param)
 		local found, _, number1, number2, number3 = param:find("^(%d+)%s+(%d+)%s+(%d+)$")
 		if found == nil then
-			minetest.chat_send_player(name, "invalid usage: " .. param)
+			minetest.chat_send_player(name, "invalid usage: " .. param.." Missing number(s).")
 			return
 		end
     local numberone = tonumber(number1)
@@ -27,5 +27,6 @@ minetest.register_chatcommand("colortag", {
   end
   local player = minetest.get_player_by_name(name)
   player:set_nametag_attributes({color = {a = 255, r = numberone, g = numbertwo, b = numberthree}})
+  minetest.chat_send_player(name, "Color changed.")
 end
 })
