@@ -1,6 +1,6 @@
 minetest.register_chatcommand("colortag", {
   params = "number1 number2 number3",
-  privs = {default = true},
+  privs = {interact = true},
   description = "Change color of player tags",
 
   func = function(name, param)
